@@ -39,7 +39,7 @@ const Login = () => {
                 <input type="text" placeholder="Your Password" className="w-full input input-bordered h-10" value={inputs.password} onChange={(e) => setInputs({...inputs, password : e.target.value})}/>
             </div>
             
-            <Link to={'/signup'} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block text-white"> {"Don't"} have an account?
+            <Link to={'/signup'} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block text-white"> {"Don't"} have an account? <span className="text-sm font-extrabold text-blue-500"> Sign Up</span>
             </Link>
             
             <div>
