@@ -1,4 +1,5 @@
 import { useAuthContext } from "../../context/AuthContext";
+import { extractTime } from "../../utils/extractTime";
 import  useConversation from "../../zustand/useConversation";
 // import {extractTime} from "../../utils/extractTime";
 
@@ -24,7 +25,7 @@ const Message = ({message} : {message : MessagesType}) =>{
                 {message.body}
             </p>
             <span className="chat-footer opacity-50 text-xs flex gap-1 items-center text-white">
-                {'20:20'}
+                {extractTime(message.createdAt)}
             </span>
         </div>
     )    
