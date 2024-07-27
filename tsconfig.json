@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Spesifikasi versi ECMASccript yang di compile
+    "module": "NodeNext", // Spesifikasi verdsi module 
+    "moduleResolution": "NodeNext", // Sepesifikasi typescript resolve module imports
+    "outDir": "./backend/dist", // mengarahkan struktur output ke direktori tersebut
+    "rootDir": "./backend", // root direktori yang akan dijalankan
+    "strict": true, // mode ketat type-checking
+    "esModuleInterop": true, // memperbolehkan untuk menggunakan defaults imports dengan commonJS modules
+    "skipLibCheck": true // skip checking all .d.ts files
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "NodeNext"
+    }
+  },
+  "include": ["backend/src/**/*"], // Spesifikasi direktori yang akan dicompile
+  "exclude": ["node_modules", "**/*.spec.ts", "frontend"] // spesifikasi direktori yang dikecualikan atau tidak akan dicompile
+}
