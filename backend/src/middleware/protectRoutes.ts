@@ -23,7 +23,6 @@ declare global{
 const protectRoute = async (req : Request, res : Response, next : NextFunction) =>{
     try {
         const token = req.cookies.jwt;
-        console.log(req.cookies.jwt)
         if(!token){
             return res.status(401).json({error : "Unauthorized - No token provided"});
         };
